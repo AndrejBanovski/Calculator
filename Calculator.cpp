@@ -2,32 +2,45 @@
 using namespace std;
 
 int main() {
-    double num1, num2;
-    char op;
-    cout << "==== КАЛКУЛАТОР ====\n";
-    cout << "Внеси прв број: ";
-    cin >> num1;
-    cout << "Внеси оператор (+, -, *, /): ";
-    cin >> op;
-    cout << "Внеси втор број: ";
-    cin >> num2;
-    double result;
-    switch(op) {
-        case '+': result = num1 + num2; break;
-        case '-': result = num1 - num2; break;
-        case '*': result = num1 * num2; break;
-        case '/': 
-            if (num2 != 0)
-                result = num1 / num2;
-            else {
-                cout << "Грешка: делење со нула!" << endl;
-                return 1;
-            }
-            break;
-        default:
-            cout << "Невалиден оператор!" << endl;
-            return 1;
-    }
-    cout << "Резултат: " << result << endl;
+    char choice;
+    do {
+        double num1, num2;
+        char op;
+
+        cout << "=== Simple Calculator ===" << endl;
+        cout << "Enter first number: ";
+        cin >> num1;
+        cout << "Enter operator (+, -, *, /): ";
+        cin >> op;
+        cout << "Enter second number: ";
+        cin >> num2;
+
+        switch (op) {
+            case '+':
+                cout << "Result: " << num1 + num2 << endl;
+                break;
+            case '-':
+                cout << "Result: " << num1 - num2 << endl;
+                break;
+            case '*':
+                cout << "Result: " << num1 * num2 << endl;
+                break;
+            case '/':
+                if (num2 != 0)
+                    cout << "Result: " << num1 / num2 << endl;
+                else
+                    cout << "Error: Division by zero!" << endl;
+                break;
+            default:
+                cout << "Invalid operator!" << endl;
+        }
+
+        cout << "Do you want to calculate again? (y/n): ";
+        cin >> choice;
+        cout << endl;
+
+    } while (choice == 'y' || choice == 'Y');
+
+    cout << "Thank you for using Simple Calculator!" << endl;
     return 0;
 }
