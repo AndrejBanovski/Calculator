@@ -1,19 +1,27 @@
-#  Calculator (C++)
+# 🔢 Simple Calculator (C++) — Menu Version
 
-A simple command-line calculator built in **C++**.  
-Supports basic arithmetic operations: `+`, `-`, `*`, `/`.
+![C++](https://img.shields.io/badge/language-C%2B%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Stars](https://img.shields.io/github/stars/AndrejBanovski/Calculator?style=social)
+
+Improved command-line calculator with an interactive menu, multiple operations, and history tracking.
 
 ---
 
 ## ✅ Features
 - Addition, subtraction, multiplication, division
-- Detects division by zero
-- Loop for multiple calculations
-- Easy-to-use CLI interface
+- Power (`x^y`)
+- Square root
+- Modulus (integers)
+- Operation history you can review at any time
+- Clean ASCII menu UI
+- Exit option
 
 ---
 
-## ▶️ How to Run
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/AndrejBanovski/Calculator.git
+## ▶️ Build & Run
+Compile with g++:
+
+```bash
+g++ Calculator.cpp -o Calculator
+./Calculator
